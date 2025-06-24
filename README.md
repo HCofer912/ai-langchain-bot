@@ -1,3 +1,9 @@
+# ai-langchain-bot
+
+![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Streamlit](https://img.shields.io/badge/streamlit-app-orange)
+
 # 🧠 AI Teaching Assistant Bot
 
 A virtual assistant for teachers to:

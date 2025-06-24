@@ -1,10 +1,18 @@
 import os
+import io
+import pandas as pd
+import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 
-OPEN_API_KEY = os.getenv("OPENAI_API_KEY")
+
+OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
+
 if not OPENAI_API_KEY:
     raise ValueError("OPENAI_API_KEY environment variable not set")
+
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+
 
 llm = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model="gpt-3.5-turbo", temperature=0.3)
 
